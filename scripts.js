@@ -3,7 +3,9 @@ function login(){
     var senha = document.getElementById("senhaAdm").value;
 
     if(usuario == "teste" && senha == "teste"){         
-        alert("Usuário fez login com sucesso!")      
+        // alert("Usuário fez login com sucesso!");  
+        limparDados();    
+        window.location.href = "monitoria.html";
         // window.location.href = "scanner.html";
     }
     else{
@@ -21,6 +23,15 @@ function Aluno(){
     var nome;
     var turma;
     var status;
+}
+
+function disciplina(){
+    window.location.href = "formulario.html";
+    //document.getElementById("disciplina").value = "Matematica";
+}
+
+function editar(){
+    document.getElementById("disciplina").value = "Matematica";
 }
 
 function dadosAluno(){
