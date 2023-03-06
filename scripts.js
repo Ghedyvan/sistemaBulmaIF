@@ -6,7 +6,6 @@ function login(){
         // alert("Usuário fez login com sucesso!");  
         limparDados();    
         window.location.href = "monitoria.html";
-        // window.location.href = "scanner.html";
     }
     else{
         alert("Usuário e/ou senha incorreto(s)!")
@@ -19,34 +18,30 @@ function limparDados(){
     document.getElementById("senhaAdm").value = "";
 }
 
-function Aluno(){
-    var nome;
-    var turma;
-    var status;
-}
-
 function disciplina(){
+    var disciplina = "Matemática";
     window.location.href = "formulario.html";
-    //document.getElementById("disciplina").value = "Matematica";
 }
 
-function editar(){
-    document.getElementById("disciplina").value = "Matematica";
-}
-
-function dadosAluno(){
-    var nome = document.querySelector(".nomedoaluno");
-    var status = document.querySelector(".statusdoaluno");
-    var aluno = new Aluno;
-    aluno.nome = "Claudinho";
-    aluno.status = "Ativo"
-    nome.textContent = aluno.nome;
-    status.textContent = aluno.status;
-    limparMatricula();
-}
 function alerta(){
     alert("TESTANDO");
 }
+
 function limparMatricula(){
     document.getElementById("numeroDeMatricula").value = '';
+}
+
+function criarConta(){
+    var nome = document.getElementById("nome").value;
+    var matricula = document.getElementById("numeroDeMatricula").value;
+    var curso = document.getElementById("curso").value;
+    var contato = document.getElementById("contato").value;
+
+    if(nome == "" || matricula == "" || curso == "" || contato == ""){
+        alert("Preencha todos os campos!");
+    }
+    else{
+        alert("Cadastro realizado com sucesso!");
+        window.location.href = "monitoria.html";
+    }
 }
